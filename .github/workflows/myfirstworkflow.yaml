@@ -1,0 +1,23 @@
+name: my_work_flow
+
+on:
+push: 
+pull_request: 
+workflow_dispatch:
+
+jobs:
+myfirstjob:
+name: First Job
+runs-on: ubuntu-latest
+steps: 
+- name: Step one
+  uses: actions/checkout@v3
+- name: Step two
+    run: |
+    touch newfile.yaml
+    echo "Prueba" >> newfile.yaml
+    cat newfile.yaml
+    pwd
+    
+  
+   
